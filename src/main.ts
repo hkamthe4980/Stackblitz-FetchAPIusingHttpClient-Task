@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-
+import {FetchData} from './app/fetch-data/fetch-data'
 @Component({
   selector: 'app-root',
+  imports:[FetchData],
+
   template: `
-    <h1>Hello from {{ name }}!</h1>
-    <a target="_blank" href="https://angular.dev/overview">
-      Learn more about Angular
-    </a>
+    <h1>{{name}}</h1>
+    <app-fetch-data></app-fetch-data>
   `,
 })
 export class App {
-  name = 'Angular';
+  name = 'Fetch Data';
 }
 
 bootstrapApplication(App);
